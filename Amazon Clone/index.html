@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!-- header -->
+<header class="bg-dark text-white py-2">
+  <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap">
+    
+    <!-- logo -->
+    <a href="#" class="me-3">
+      <img id="logo" src="https://freepnglogo.com/images/all_img/1715487998amazon-logo-transparent.png" alt="logo">
+    </a>
+
+    <!-- location -->
+    <div class="d-flex align-items-center me-3 d-none d-md-flex location">
+      <i class="ri-map-pin-line fs-4 me-2"></i>
+      <div>
+        <p class="mb-0 small">Delivering to Pune 411004</p>
+        <h6 class="mb-0">Update Location</h6>
+      </div>
+    </div>
+
+    <!-- search bar -->
+    <div class="flex-grow-1 mx-3 search-bar d-flex">
+      <div class="d-flex align-items-center bg-light px-2">
+        <h6 class="mb-0 small">All</h6>
+        <i class="ri-arrow-down-s-line ms-1"></i>
+      </div>
+      <input type="text" class="form-control border-0" placeholder="Search Amazon.in">
+      <button class="btn" id="search-icon"><i class="ri-search-line"></i></button>
+    </div>
+
+    <!-- language -->
+    <div class="d-flex align-items-center me-3 d-none d-lg-flex">
+      <img id="flag" src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="flag">
+      <h6 class="mb-0 ms-2">EN <i class="ri-arrow-down-s-line"></i></h6>
+    </div>
+
+    <!-- sign-in -->
+    <div id="sign-in" class="me-3 d-none d-md-block">
+      <p class="mb-0 small">Hello, Sign in</p>
+      <h6 class="mb-0">Account & Lists <i class="ri-arrow-down-s-line"></i></h6>
+    </div>
+
+    <!-- orders -->
+    <div id="orders" class="me-3 d-none d-md-block">
+      <p class="mb-0 small">Returns</p>
+      <h6 class="mb-0">& Orders</h6>
+    </div>
+
+    <!-- cart -->
+    <div id="cart" class="d-flex align-items-center">
+      <i class="ri-shopping-cart-2-line fs-4"></i>
+      <h6 class="mb-0 ms-1">Cart</h6>
+    </div>
+  </div>
+</header>
+
+<!-- categories bar -->
+<div class="categories bg-secondary text-white py-2">
+  <div class="container-fluid d-flex align-items-center flex-wrap">
+    <!-- menu icon -->
+    <div class="menu-icon d-flex align-items-center me-3">
+      <i class="ri-menu-line fs-5 me-1"></i>
+      <h6 class="mb-0">All</h6>
+    </div>
+    <div class="d-flex flex-wrap gap-3">
+      <a href="#" class="text-white text-decoration-none">Fresh</a>
+      <a href="#" class="text-white text-decoration-none">MX Player</a>
+      <a href="#" class="text-white text-decoration-none">Sell</a>
+      <a href="#" class="text-white text-decoration-none">Best Sellers</a>
+      <a href="#" class="text-white text-decoration-none">Mobiles</a>
+      <a href="#" class="text-white text-decoration-none">Today's Deals</a>
+      <a href="#" class="text-white text-decoration-none">Prime</a>
+      <a href="#" class="text-white text-decoration-none">Customer Service</a>
+      <a href="#" class="text-white text-decoration-none">Electronics</a>
+      <a href="#" class="text-white text-decoration-none">Fashion</a>
+      <a href="#" class="text-white text-decoration-none">Home & Kitchen</a>
+      <a href="#" class="text-white text-decoration-none">Amazon Pay</a>
+      <a href="#" class="text-white text-decoration-none">Computers</a>
+      <a href="#" class="text-white text-decoration-none">Books</a>
+    </div>
+  </div>
+</div>
+
+    
+
+    <!-- Image Slider -->
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="./images/slide1.webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="./images/slide2.webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./images/slide3.webp" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<!-- Products -->
+<div class="container my-4">
+  <div class="row">
+    <!-- electronics -->
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="product-box">
+        <h5>Top Deals in Electronics</h5>
+        <div class="row">
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Laptop">
+            <p>Laptop</p>
+          </div>
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/373945/pexels-photo-373945.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Smartphone">
+            <p>Smartphone</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/4042802/pexels-photo-4042802.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Headphones">
+            <p>Headphones</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Camera">
+            <p>Camera</p>
+          </div>
+        </div>
+        <a href="#">See more electronics</a>
+      </div>
+    </div>
+
+    <!-- fashion -->
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="product-box">
+        <h5>Trending in Fashion</h5>
+        <div class="row">
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Shirt">
+            <p>Shirt</p>
+          </div>
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Shoes">
+            <p>Sneakers</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/994517/pexels-photo-994517.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Jacket">
+            <p>Jacket</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Handbag">
+            <p>Handbag</p>
+          </div>
+        </div>
+        <a href="#">See more fashion</a>
+      </div>
+    </div>
+
+    <!-- home & kitchen -->
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="product-box">
+        <h5>Home & Kitchen</h5>
+        <div class="row">
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/276267/pexels-photo-276267.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mixer">
+            <p>Mixer</p>
+          </div>
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/4207784/pexels-photo-4207784.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cookware">
+            <p>Cookware</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/276566/pexels-photo-276566.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sofa">
+            <p>Sofa</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/813269/pexels-photo-813269.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lamp">
+            <p>Lamp</p>
+          </div>
+        </div>
+        <a href="#">See more home & kitchen</a>
+      </div>
+    </div>
+
+    <!-- beauty & personal care -->
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="product-box">
+        <h5>Beauty & Personal Care</h5>
+        <div class="row">
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/3738348/pexels-photo-3738348.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Perfume">
+            <p>Perfume</p>
+          </div>
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lipstick">
+            <p>Lipstick</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Skincare">
+            <p>Skincare</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/973406/pexels-photo-973406.jpeg" alt="Hair Dryer">
+            <p>Hair Dryer</p>
+          </div>
+        </div>
+        <a href="#">See more beauty</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- books -->
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="product-box">
+        <h5>Best of Books</h5>
+        <div class="row">
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Novel">
+            <p>Novels</p>
+          </div>
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/261909/pexels-photo-261909.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Notebook">
+            <p>Notebooks</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/1106468/pexels-photo-1106468.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Kids Book">
+            <p>Kids Books</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/267586/pexels-photo-267586.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Study Book">
+            <p>Study Guides</p>
+          </div>
+        </div>
+        <a href="#">See more books</a>
+      </div>
+    </div>
+
+    <!-- sports -->
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="product-box">
+        <h5>Sports & Fitness</h5>
+        <div class="row">
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/220421/pexels-photo-220421.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Football">
+            <p>Football</p>
+          </div>
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cricket Bat">
+            <p>Cricket Bat</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg" alt="Cycle">
+            <p>Bicycle</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tennis">
+            <p>Tennis Racket</p>
+          </div>
+        </div>
+        <a href="#">See more sports</a>
+      </div>
+    </div>
+
+    <!-- grocery -->
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="product-box">
+        <h5>Daily Essentials</h5>
+        <div class="row">
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/1300972/pexels-photo-1300972.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fruits">
+            <p>Fruits</p>
+          </div>
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/4198023/pexels-photo-4198023.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Vegetables">
+            <p>Vegetables</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/4199091/pexels-photo-4199091.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Snacks">
+            <p>Snacks</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/4198002/pexels-photo-4198002.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Beverages">
+            <p>Beverages</p>
+          </div>
+        </div>
+        <a href="#">See more grocery</a>
+      </div>
+    </div>
+
+    <!-- toys -->
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="product-box">
+        <h5>Kids & Toys</h5>
+        <div class="row">
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/264917/pexels-photo-264917.jpeg" alt="Teddy">
+            <p>Teddy Bear</p>
+          </div>
+          <div class="col-6 mb-3">
+            <img src="https://images.pexels.com/photos/3933025/pexels-photo-3933025.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Blocks">
+            <p>Blocks</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/54101/magic-cube-cube-puzzle-play-54101.jpeg" alt="Puzzle">
+            <p>Puzzle</p>
+          </div>
+          <div class="col-6">
+            <img src="https://images.pexels.com/photos/6219074/pexels-photo-6219074.jpeg" alt="Wooden Toys">
+            <p>Wodden Toys</p>
+          </div>
+        </div>
+        <a href="#">See more toys</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Bikes Section -->
+ <div class="container-fluid">
+    <div class="bike-slider">
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Starting ₹70,348 | Set off on your next great ride</h2>
+        <span class="see-all">See all offers</span>
+      </div>
+
+      <div class="bike-scroll mt-3">
+        <!-- repeat bike items -->
+        <div class="bike-item">
+          <img src="https://ukdiaries.in/wp-content/uploads/2021/04/pngfind.com-royal-enfield-bullet-png-739623-e1619504576474.png" alt="Royal Enfield Classic 350">
+        </div>
+        <div class="bike-item">
+          <img src="https://th.bing.com/th/id/R.33b46bba5873b665c5bccd36c6f06dce?rik=LCOSZ0jpJICCcA&riu=http%3a%2f%2fwww.bajajauto.com%2fimages%2fpulsar-220f-color-laser-blue.png&ehk=LGZZyhBLitb4s71QaNZL6IFoizpYmizZLFVvnwnI1lc%3d&risl=&pid=ImgRaw&r=0" alt="Bajaj Pulsar 150">
+        </div>
+        <div class="bike-item">
+          <img src="https://toppng.com/uploads/thumbnail/hero-splendor-plus-11550719354w1akqv7cvg.png" alt="Hero Splendor Plus">
+        </div>
+
+        <div class="bike-item">
+          <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/49494/fz-v3-right-side-view-2.png?isig=0&q=80" alt="Yamaha FZ-S">
+        </div>
+        <div class="bike-item">
+          <img src="https://www.tvsmotor.com/cr/-/media/Feature/IB/Columbia/compressed-images/virtual-experience/Virtual-Experince/160-4v/black-1.png" alt="TVS Apache RTR 160">
+        </div>
+        <div class="bike-item">
+          <img src="https://ukdiaries.in/wp-content/uploads/2021/04/pngfind.com-royal-enfield-bullet-png-739623-e1619504576474.png" alt="Royal Enfield Classic 350">
+        </div>
+        <div class="bike-item">
+          <img src="https://th.bing.com/th/id/R.33b46bba5873b665c5bccd36c6f06dce?rik=LCOSZ0jpJICCcA&riu=http%3a%2f%2fwww.bajajauto.com%2fimages%2fpulsar-220f-color-laser-blue.png&ehk=LGZZyhBLitb4s71QaNZL6IFoizpYmizZLFVvnwnI1lc%3d&risl=&pid=ImgRaw&r=0" alt="Bajaj Pulsar 150">
+        </div>
+        <div class="bike-item">
+          <img src="https://toppng.com/uploads/thumbnail/hero-splendor-plus-11550719354w1akqv7cvg.png" alt="Hero Splendor Plus">
+        </div>
+
+        <div class="bike-item">
+          <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/49494/fz-v3-right-side-view-2.png?isig=0&q=80" alt="Yamaha FZ-S">
+        </div>
+        <div class="bike-item">
+          <img src="https://www.tvsmotor.com/cr/-/media/Feature/IB/Columbia/compressed-images/virtual-experience/Virtual-Experince/160-4v/black-1.png" alt="TVS Apache RTR 160">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Product Box -->
+   <div class="container">
+  <div class="row">
+    <!-- box 1 -->
+    <div class="col-md-3">
+      <div class="product-box">
+        <h2>Up to 50% Off | Designed for living</h2>
+        <div class="product-grid">
+          <img src="https://m.media-amazon.com/images/I/81gpWg83yIL._AC_SY170_.jpg" alt="Sofa">
+          <img src="https://m.media-amazon.com/images/I/61UhxtF9jiL._AC_SY170_.jpg" alt="Bookshelf">
+          <img src="https://m.media-amazon.com/images/I/61GTB3mI4jL._AC_SY170_.jpg" alt="Fabric Sofa">
+          <img src="https://m.media-amazon.com/images/I/61TLYDT1pHL._AC_SY170_.jpg" alt="Grey Sofa">
+        </div>
+        <a href="#" class="see-more">See more</a>
+      </div>
+    </div>
+
+    <!-- box 2 -->
+    <div class="col-md-3">
+      <div class="product-box">
+        <h2>Up to 60% Off | Electronics</h2>
+          <div class="product-grid">
+          <img src="https://m.media-amazon.com/images/I/81gpWg83yIL._AC_SY170_.jpg" alt="Sofa">
+          <img src="https://m.media-amazon.com/images/I/61UhxtF9jiL._AC_SY170_.jpg" alt="Bookshelf">
+          <img src="https://m.media-amazon.com/images/I/61GTB3mI4jL._AC_SY170_.jpg" alt="Fabric Sofa">
+          <img src="https://m.media-amazon.com/images/I/61TLYDT1pHL._AC_SY170_.jpg" alt="Grey Sofa">
+        </div>
+        <a href="#" class="see-more">See more</a>
+      </div>
+    </div>
+
+    <!-- box 3 -->
+    <div class="col-md-3">
+      <div class="product-box">
+        <h2>Kitchen Essentials | Best Deals</h2>
+         <div class="product-grid">
+          <img src="https://m.media-amazon.com/images/I/81gpWg83yIL._AC_SY170_.jpg" alt="Sofa">
+          <img src="https://m.media-amazon.com/images/I/61UhxtF9jiL._AC_SY170_.jpg" alt="Bookshelf">
+          <img src="https://m.media-amazon.com/images/I/61GTB3mI4jL._AC_SY170_.jpg" alt="Fabric Sofa">
+          <img src="https://m.media-amazon.com/images/I/61TLYDT1pHL._AC_SY170_.jpg" alt="Grey Sofa">
+        </div>
+        <a href="#" class="see-more">See more</a>
+      </div>
+    </div>
+
+    <!-- box 4 -->
+    <div class="col-md-3">
+      <div class="product-box">
+        <h2>Fashion Deals | Under ₹999</h2>
+          <div class="product-grid">
+          <img src="https://m.media-amazon.com/images/I/81gpWg83yIL._AC_SY170_.jpg" alt="Sofa">
+          <img src="https://m.media-amazon.com/images/I/61UhxtF9jiL._AC_SY170_.jpg" alt="Bookshelf">
+          <img src="https://m.media-amazon.com/images/I/61GTB3mI4jL._AC_SY170_.jpg" alt="Fabric Sofa">
+          <img src="https://m.media-amazon.com/images/I/61TLYDT1pHL._AC_SY170_.jpg" alt="Grey Sofa">
+        </div>
+        <a href="#" class="see-more">See more</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Living Setion -->
+<div class="container-fluid my-5">
+    <div class="bike-slider">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Up to 50% Off | Designed for living, priced for you</h2>
+        <span class="see-all">See all offers</span>
+      </div>
+
+      <div class="bike-scroll mt-3">
+        <!-- repeat bike items -->
+        <div class="bike-item">
+          <img src="https://www.shopinroom.com/wp-content/uploads/2020/02/living-room-5.png" alt="Sofa Image">
+        </div>
+        <div class="bike-item">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.woASjrb4XK3Ni3DnUmq9wAHaHJ?r=0&w=600&h=579&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sofa Image">
+        </div>
+       
+        <div class="bike-item">
+          <img src="https://www.shopinroom.com/wp-content/uploads/2020/02/living-room-5.png" alt="Sofa Image">
+        </div>
+        <div class="bike-item">
+          <img src="https://img.freepik.com/premium-photo/interior-design-modern-living-room-generative-art-by-ai_35887-7940.jpg" alt="Sofa Image">
+        </div>
+
+        <div class="bike-item">
+          <img src="https://www.shopinroom.com/wp-content/uploads/2020/02/living-room-5.png" alt="Sofa Image">
+        </div>
+        <div class="bike-item">
+          <img src="https://tse4.mm.bing.net/th/id/OIP.VzlKw1vIMWsCGB5zn-9ikgHaHa?r=0&w=1024&h=1024&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sofa Image">
+        </div>
+        <div class="bike-item">
+          <img src="https://www.shopinroom.com/wp-content/uploads/2020/02/living-room-5.png" alt="Sofa Image">
+        </div>
+        <div class="bike-item">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.woASjrb4XK3Ni3DnUmq9wAHaHJ?r=0&w=600&h=579&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sofa Image">
+        </div>
+       
+        <div class="bike-item">
+          <img src="https://img.freepik.com/premium-photo/interior-design-modern-living-room-generative-art-by-ai_35887-7940.jpg" alt="Sofa Image">
+        </div>
+        <div class="bike-item">
+          <img src="https://tse4.mm.bing.net/th/id/OIP.VzlKw1vIMWsCGB5zn-9ikgHaHa?r=0&w=1024&h=1024&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sofa Image">
+        </div>
+
+        <div class="bike-item">
+          <img src="https://www.shopinroom.com/wp-content/uploads/2020/02/living-room-5.png" alt="Sofa Image">
+        </div>
+        <div class="bike-item">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.woASjrb4XK3Ni3DnUmq9wAHaHJ?r=0&w=600&h=579&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sofa Image">
+        </div>
+      
+
+      </div>
+    </div>
+  </div>
+ 
+
+
+  <!-- Products & Info  -->
+ <div class="container my-5">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+
+    <!-- Card 1 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg" class="card-img-top" alt="Modern Sofa">
+        <div class="card-body">
+          <h5 class="card-title">Modern Sofa</h5>
+          <p class="card-text">Stylish and comfortable modern sofa perfect for living rooms.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg" class="card-img-top" alt="Dining Table">
+        <div class="card-body">
+          <h5 class="card-title">Dining Table</h5>
+          <p class="card-text">Elegant wooden dining table set for family gatherings.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg" class="card-img-top" alt="Armchair">
+        <div class="card-body">
+          <h5 class="card-title">Armchair</h5>
+          <p class="card-text">Cozy armchair with premium cushioning for relaxation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg" class="card-img-top" alt="Bookshelf">
+        <div class="card-body">
+          <h5 class="card-title">Bookshelf</h5>
+          <p class="card-text">Stylish wooden bookshelf with multiple compartments.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Card 56 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg" class="card-img-top" alt="Modern Sofa">
+        <div class="card-body">
+          <h5 class="card-title">Modern Sofa</h5>
+          <p class="card-text">Stylish and comfortable modern sofa perfect for living rooms.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg" class="card-img-top" alt="Dining Table">
+        <div class="card-body">
+          <h5 class="card-title">Dining Table</h5>
+          <p class="card-text">Elegant wooden dining table set for family gatherings.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg" class="card-img-top" alt="Armchair">
+        <div class="card-body">
+          <h5 class="card-title">Armchair</h5>
+          <p class="card-text">Cozy armchair with premium cushioning for relaxation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg" class="card-img-top" alt="Bookshelf">
+        <div class="card-body">
+          <h5 class="card-title">Bookshelf</h5>
+          <p class="card-text">Stylish wooden bookshelf with multiple compartments.</p>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  </div>
+</div>
+
+
+
+
+    <!-- Footer  -->
+<footer>
+  <div class="back-to-top">
+    <a href="#">Back to top</a>
+  </div>
+
+  <div class="footer-links">
+    <div>
+      <h3>Get to Know Us</h3>
+      <a href="#">About Amazon</a>
+      <a href="#">Careers</a>
+      <a href="#">Press Releases</a>
+      <a href="#">Amazon Science</a>
+    </div>
+
+    <div>
+      <h3>Connect with Us</h3>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+
+    <div>
+      <h3>Make Money with Us</h3>
+      <a href="#">Sell on Amazon</a>
+      <a href="#">Sell under Amazon Accelerator</a>
+      <a href="#">Protect and Build Your Brand</a>
+      <a href="#">Amazon Global Selling</a>
+      <a href="#">Supply to Amazon</a>
+      <a href="#">Become an Affiliate</a>
+      <a href="#">Fulfilment by Amazon</a>
+      <a href="#">Advertise Your Products</a>
+      <a href="#">Amazon Pay on Merchants</a>
+    </div>
+
+    <div>
+      <h3>Let Us Help You</h3>
+      <a href="#">Your Account</a>
+      <a href="#">Returns Centre</a>
+      <a href="#">Recalls and Product Safety Alerts</a>
+      <a href="#">100% Purchase Protection</a>
+      <a href="#">Amazon App Download</a>
+      <a href="#">Help</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <img src="https://freepnglogo.com/images/all_img/1715487998amazon-logo-transparent.png" alt="Amazon Logo">
+    <p>© 1996-2025, Amazon Clone by Suraj, Inc.</p>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

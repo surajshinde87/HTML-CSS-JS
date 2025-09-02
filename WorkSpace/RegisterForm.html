@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Register Form</title>
+  <link rel="stylesheet" href="registerform.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1 class="form-title">Register as an Employee</h1>
+    <form action="/" method="post" class="employee-form">
+
+      <div class="form-group">
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" placeholder="Enter Your Email ID" required>
+      </div>
+
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Enter Your First Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Enter Your Last Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter Your Age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" pattern="[0-9]{10}" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" placeholder="Enter Your Address" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" placeholder="Enter Your Country" required>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" placeholder="Enter Your State" required>
+      </div>
+
+      <div class="form-group">
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+          <option value="">--Select Department--</option>
+          <option value="engineering">Engineering</option>
+          <option value="hr">Human Resources</option>
+          <option value="sales">Sales</option>
+          <option value="marketing">Marketing</option>
+          <option value="finance">Finance</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="jobRole">Job Role:</label>
+        <select id="jobRole" name="jobRole" required>
+          <option value="">--Select Job Role--</option>
+          <option value="frontend">Frontend Developer</option>
+          <option value="backend">Backend Developer</option>
+          <option value="java">Java FullStack Developer</option>
+          <option value="designer">UI/UX Designer</option>
+          <option value="manager">Project Manager</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="experience">Experience (in years):</label>
+        <input type="number" id="experience" name="experience" placeholder="Enter Your Experience" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" placeholder="Enter Your Salary" required>
+      </div>
+
+      <div class="form-group">
+        <label for="joiningDate">Joining Date:</label>
+        <input type="date" id="joiningDate" name="joiningDate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="employeeType">Employee Type:</label>
+        <select id="employeeType" name="employeeType" required>
+          <option value="">--Select Type--</option>
+          <option value="fulltime">Full-Time</option>
+          <option value="parttime">Part-Time</option>
+          <option value="contract">Contract</option>
+          <option value="intern">Intern</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select Gender--</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn-submit">Register</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

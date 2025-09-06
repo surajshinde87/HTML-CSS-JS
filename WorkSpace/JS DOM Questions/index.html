@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript DOM Tasks</title>
+    <style>
+      .highlight {
+        padding: 10px;
+        margin: 5px;
+      }
+      .note {
+        margin: 5px;
+      }
+      .box {
+        width: 80px;
+        height: 80px;
+        margin: 5px;
+        display: inline-block;
+        background: lightgray;
+      }
+      .frame {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        background: lightpink;
+      }
+      .item {
+        margin: 5px;
+        padding: 5px;
+        background: lightcyan;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Original Title</h1>
+    <button onclick="changeTitle()">Change Title</button>
+
+    <div class="highlight">Highlight 1</div>
+    <div class="highlight">Highlight 2</div>
+
+    <button onclick="changeHighlightBg()">Highlight Yellow</button>
+
+    <div
+      id="box1"
+      style="width: 100px; height: 100px; background: lightblue; margin: 10px"
+    >
+      Box1
+    </div>
+    <button onclick="hideBox1()">Hide Box1</button>
+
+    <button onclick="increaseFontSize()">Increase Font Size</button>
+    <p class="note">This is a note 1</p>
+    <p class="note">This is a note 2</p>
+
+    <img id="profilePic" src="profile-img.jpg" alt="Profile" />
+    <button onclick="resizeProfilePic()">Resize Profile Pic</button>
+    <br /><br />
+
+    <div class="item">item one</div>
+    <div class="item">item two</div>
+    <div class="item">item three</div>
+    <button onclick="toggleItems()">Toggle Items</button>
+    <button onclick="countItems()">Count Items</button>
+    <button onclick="makeUppercase()">Uppercase Items</button>
+    <br /><br />
+
+
+    <div class="box">Box</div>
+    <div class="box">Box</div>
+    <div class="box">Box</div>
+    <div class="box">Box</div>
+    <div class="box">Box</div>
+    <button onclick="applyBoxColors()">Apply Box Colors</button>
+
+    <div class="frame">Frame 1</div>
+    <div class="frame">Frame 2</div>
+    <button onclick="addBorder()">Add Border</button>
+
+    <br /><br />
+
+    <script src="script.js"></script>
+  </body>
+</html>

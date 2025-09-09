@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS CRUD Operations</title>
+</head>
+<body>
+    <h1>JS CRUD Operations</h1>
+
+    <div id="div">
+        <h1>This is a heading</h1>
+        <p>This is a paragraph.</p>
+    </div>
+
+    <button onclick="addElement()">Add Element</button>
+    <button onclick="updateElement()">UpdateElement Element</button>
+    <button onclick="removeElement()">Remove Element</button>
+ 
+
+    <script>
+
+        function addElement(){
+            let para = document.createElement("p");
+
+            para.innerText = "This is a new paragraph added by JS";
+
+            let element = document.getElementById("div");
+            element.appendChild(para);
+        }
+
+        function updateElement(){
+            let element = document.querySelector("#div h1");
+            element.innerHTML = "<h2>This is an updated heading</h2>";
+        }
+
+        function removeElement(){
+            let element = document.getElementById("div");
+            element.removeChild(element.lastElementChild);
+        }
+
+    </script>
+</body>
+</html>

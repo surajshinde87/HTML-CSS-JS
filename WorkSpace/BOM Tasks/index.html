@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Tasks</title>
+</head>
+<body>
+
+    <h1>Browser Object Model</h1>
+
+    <h1>Window </h1>
+    <p id="window_action"></p>
+     <button onclick="windowAction()">Window</button>
+     
+     <h1>Navigator</h1>
+     <p id="navigator"></p>
+     <button onclick="showNavigator()">Navigator</button>
+     
+     <h1>Screen</h1>
+     <p id="screen"></p>
+     <button onclick="showScreen()">Screen</button>
+
+
+
+
+     <!-- To take input from the user -->
+        <h1>Prompt Eamples</h1>
+         <h2 id="first_name"></h2>
+         <h2 id="last_name"></h2>
+     <button onclick="addName()">Add My Name to Page</button>
+
+
+     <!-- For alerts -->
+        <h1>Alert Examples</h1>
+        <button onclick="alert('Do Not Share Your Sensitive Info Here')">Alert Box</button>
+
+        <!-- Confirm Box -->
+        <h1>Confirm Example</h1>
+        <button onclick="confirm('Are You 18 Years Old to Use This Wesite')">Confirm You are Adult</button>
+       
+
+
+
+    <script>
+
+        function windowAction() {
+            let window_action = document.getElementById("window_action");
+            window_action.innerHTML = "Window Width: " + window.innerWidth + "<br>"
+            + "Window Height: " + window.innerHeight + "<br>"
+            + "Window Outer Width: " + window.outerWidth + "<br>"
+            + "Window Outer Height: " + window.outerHeight + "<br>"
+            + "Window URL: " + window.location.href + "<br>"    
+            + "Window Hostname: " + window.location.hostname + "<br>"
+            + "Window Protocol: " + window.location.protocol + "<br>"
+            + "Window Port: " + window.location.port + "<br>"
+            + "Window History Length: " + window.history.length + "<br>"
+            + "Window Title: " + document.title + "<br>";
+
+        }
+
+
+
+      function showNavigator() {
+    let navigator_info = document.getElementById("navigator");
+    navigator_info.innerHTML = "Browser Name" + navigator.appName + "<br>"
+    + "App Version: " + navigator.appVersion + "<br>"
+    + "User Agent: " + navigator.userAgent + "<br>"
+    + "Platform: " + navigator.platform + "<br>";
+    + "Browser Language: " + navigator.language + "<br>"
+    + "Online Status: " + navigator.onLine + "<br>"
+    + "Cookies Enabled: " + navigator.cookieEnabled + "<br>"
+    + "JavaScript Enabled: " + navigator.javaEnabled() + "<br>"
+
+}
+
+
+function showScreen() {
+    let screen_info = document.getElementById("screen");
+    screen_info.innerHTML = "Screen Width: " + screen.width + "<br>"
+    + "Screen Height: " + screen.height + "<br>"
+    + "Screen Color Depth: " + screen.colorDepth + "<br>"
+    + "Screen Pixel Depth: " + screen.pixelDepth + "<br>";
+}
+
+function addName() {
+    let first_name = prompt("Enter Your First Name");
+    let last_name = prompt("Enter Your Last Name");
+    document.getElementById("first_name").innerHTML = "First Name: " + first_name;
+    document.getElementById("last_name").innerHTML = "Last Name: " +    last_name;
+}
+
+    </script>
+    
+</body>
+</html>
